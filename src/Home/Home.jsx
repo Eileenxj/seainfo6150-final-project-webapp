@@ -1,16 +1,18 @@
 import React from 'react'
-import Form from "../Form/Form";
-import treefrog from "../images/treefrog.jpg";
-
-const Home = () => {
+import AllCategories from "../AllCategories/AllCategories.jsx";
+import RecipeList from "../RecipeList/RecipeList.jsx";
+import PropTypes from "prop-types";
+const Home = (props) => {
     return (
         <div>
-            The home page
-            <h1>I changed this homepage</h1>
-            <img src={treefrog} alt="tree frog" />
-            <Form />
+            <AllCategories categories={props.categories}/>
+            <RecipeList recipes={props.recipes}/>
+                
         </div>
     )
 }
-
+Home.propTypes = {
+    recipes: PropTypes.array.isRequired,
+    categories: PropTypes.array.isRequired
+}
 export default Home

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Foo = () => {
+const Baz = (props) => {
     return (
         <div>
-            The foo page
+            The RecipeDetail page
         </div>
     )
 }
 
-export default Foo
+export default Baz

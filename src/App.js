@@ -1,69 +1,76 @@
-import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-
+import React, {useState, useEffect} from "react";
+import { Switch, Route } from "react-router-dom";
+import NavigationBar from "./NavigationBar/NavigationBar.jsx"
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
+import Category from "./Category/Category.jsx";
+import RecipeDetail from "./RecipeDetails/RecipeDetail.jsx"
 import Error from "./Error/Error.jsx";
+import { isEmpty } from "lodash";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
-const externalContent = {
-  id: "article-1",
-  title: "An Article",
-  author: "April Bingham",
-  text: "Some text in the article",
-};
-
 function App() {
-  return (
-    <>
+  const [fetchedRecipes, setFetchedRecipes] = useState();
+  const [fetchedCategories, setFetchedCategories] = useState();
+  useEffect(() => {
+    const fetchedRecipes = async () => {
+      // performs a GET request
+      const recipesResponse = await fetch("https://demo3289634.mockable.io/recipes");
+      const recipesResponseJson = await recipesResponse.json();
+      setFetchedRecipes(Object.values(recipesResponseJson));
+    };
+    const fetchedCategories = async () => {
+      // performs a GET request
+      const categoriesResponse = await fetch("https://demo3289634.mockable.io/categories");
+      const categoriesResponseJson = await categoriesResponse.json();
+      setFetchedCategories(Object.values(categoriesResponseJson));
+    };
+
+    if (isEmpty(fetchedRecipes)) {
+      fetchedRecipes();
+    }
+    if (isEmpty(fetchedCategories)) {
+      fetchedCategories();
+    }
+
+
+  }, [fetchedRecipes, fetchedCategories]);
+
+  return isEmpty(fetchedRecipes) ? null : (
+    <div className="recipe-app">
+      <head>
+        <title>PopularRecipes | Food, friends and love</title>
+      </head>
       <header>
-        <nav>
-          <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/foo">Foo</Link>
-            </li>
-            <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavigationBar/>
       </header>
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path */}
+        <Route path="/"><Home recipes={fetchedRecipes} categories={fetchedCategories}/></Route>
         <Route
-          path="/bar/:categoryId/:productId"
+          path="/category/:categoryid"
           exact
           render={({ match }) => (
             // getting the parameters from the url and passing
             // down to the component as props
-            <Bar
+            <Category
               categoryId={match.params.categoryId}
-              productId={match.params.productId}
             />
           )}
         />
         <Route
-          path="/baz"
+          path="/recipe/:id"
           exact
-          render={() => <Baz content={externalContent} />}
+          render={({ match }) => (
+            // getting the parameters from the url and passing
+            // down to the component as props
+            <RecipeDetail
+              id={match.params.id}
+            />
+          )}
         />
         <Route component={Error} />
       </Switch>
-    </>
+    </div>
   );
 }
 
