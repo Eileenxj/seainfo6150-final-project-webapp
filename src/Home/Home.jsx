@@ -5,14 +5,15 @@ import PropTypes from "prop-types";
 const Home = (props) => {
     return (
         <div>
-            <AllCategories categories={props.categories}/>
-            <RecipeList recipes={props.recipes}/>
+            {/* {props.recipes} */}
+            {/* <AllCategories categories={props.categories}/> */}
+            {/* <RecipeList recipes={props.recipes}/> */}
                 
         </div>
     )
 }
 Home.propTypes = {
-    recipes: PropTypes.array.isRequired,
-    categories: PropTypes.array.isRequired
+    recipes: PropTypes.array.isRequired
+    // categories: PropTypes.array.isRequired
 }
 export default Home

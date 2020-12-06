@@ -7,34 +7,36 @@ import RecipeDetail from "./RecipeDetails/RecipeDetail.jsx"
 import Error from "./Error/Error.jsx";
 import { isEmpty } from "lodash";
 
+
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
 function App() {
   const [fetchedRecipes, setFetchedRecipes] = useState();
-  const [fetchedCategories, setFetchedCategories] = useState();
+  // const [fetchedCategories, setFetchedCategories] = useState();
   useEffect(() => {
     const fetchedRecipes = async () => {
       // performs a GET request
       const recipesResponse = await fetch("https://demo3289634.mockable.io/recipes");
       const recipesResponseJson = await recipesResponse.json();
-      setFetchedRecipes(Object.values(recipesResponseJson));
+      console.log(typeof(recipesResponseJson["recipes"]))
+      setFetchedRecipes(recipesResponseJson["recipes"]);
     };
-    const fetchedCategories = async () => {
-      // performs a GET request
-      const categoriesResponse = await fetch("https://demo3289634.mockable.io/categories");
-      const categoriesResponseJson = await categoriesResponse.json();
-      setFetchedCategories(Object.values(categoriesResponseJson));
-    };
+    // const fetchedCategories = async () => {
+    //   // performs a GET request
+    //   const categoriesResponse = await fetch("https://demo3289634.mockable.io/categories");
+    //   const categoriesResponseJson = await categoriesResponse.json();
+    //   setFetchedCategories(Object.values(categoriesResponseJson));
+    // };
 
     if (isEmpty(fetchedRecipes)) {
       fetchedRecipes();
     }
-    if (isEmpty(fetchedCategories)) {
-      fetchedCategories();
-    }
+    // if (isEmpty(fetchedCategories)) {
+    //   fetchedCategories();
+    // }
 
 
-  }, [fetchedRecipes, fetchedCategories]);
+  }, [fetchedRecipes]);
 
   return isEmpty(fetchedRecipes) ? null : (
     <div className="recipe-app">
@@ -43,10 +45,24 @@ function App() {
       </head>
       <header>
         <NavigationBar/>
+        <meta name="referrer" content="no-referrer"/>
       </header>
+      <div>
+        <ul>
+          {fetchedRecipes.map((recipe) => (
+            <li>
+            <article>
+              <img src={require(`./images/homerecipes/${recipe.id}-556x370.jpg`)} alt={recipe.title} />
+              <h2>{recipe.title}</h2>
+            </article>
+          </li>
+          ))}
+        </ul>
+      </div>
       <Switch>
-        <Route path="/"><Home recipes={fetchedRecipes} categories={fetchedCategories}/></Route>
-        <Route
+      {/* <Route path="/"><Home recipes={fetchedRecipes}/></Route> */}
+        {/* <Route path="/"><Home recipes={fetchedRecipes} categories={fetchedCategories}/></Route> */}
+        {/* <Route
           path="/category/:categoryid"
           exact
           render={({ match }) => (
@@ -68,7 +84,7 @@ function App() {
             />
           )}
         />
-        <Route component={Error} />
+        <Route component={Error} /> */}
       </Switch>
     </div>
   );

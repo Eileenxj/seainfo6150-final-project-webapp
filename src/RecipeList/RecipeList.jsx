@@ -4,10 +4,10 @@ import RecipeListItem from "../RecipeListItem/RecipeListItem.jsx";
 const RecipeList = (props) => {
   let displayContent;
 
-  if (props.articles) {
+  if (props.recipes) {
     displayContent = (
       <ul>
-        {props.articles.map((recipe) => (
+        {props.recipes.map((recipe) => (
           <RecipeListItem recipe={recipe} key={recipe.id} />
         ))}
       </ul>
