@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.js": "/seainfo6150-final-project-webapp/static/js/main.3dfacf66.chunk.js",
-    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.3dfacf66.chunk.js.map",
+    "main.js": "/seainfo6150-final-project-webapp/static/js/main.6f6c753f.chunk.js",
+    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.6f6c753f.chunk.js.map",
     "runtime~main.js": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js",
     "runtime~main.js.map": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js.map",
-    "static/js/2.10d31c33.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.10d31c33.chunk.js",
-    "static/js/2.10d31c33.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.10d31c33.chunk.js.map",
+    "static/js/2.c2a8741b.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.c2a8741b.chunk.js",
+    "static/js/2.c2a8741b.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.c2a8741b.chunk.js.map",
     "index.html": "/seainfo6150-final-project-webapp/index.html",
-    "precache-manifest.d7997c74c01430f25e50d4c6121696fa.js": "/seainfo6150-final-project-webapp/precache-manifest.d7997c74c01430f25e50d4c6121696fa.js",
-    "service-worker.js": "/seainfo6150-final-project-webapp/service-worker.js"
+    "precache-manifest.1381ac33f9b83824fb1611e248a8a6a0.js": "/seainfo6150-final-project-webapp/precache-manifest.1381ac33f9b83824fb1611e248a8a6a0.js",
+    "service-worker.js": "/seainfo6150-final-project-webapp/service-worker.js",
+    "static/media/1043339-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/1043339-556x370.ee7e84fe.jpg",
+    "static/media/636552-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/636552-556x370.4717202d.jpg",
+    "static/media/639851-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/639851-556x370.c0801cf8.jpg",
+    "static/media/642113-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/642113-556x370.52288d4e.jpg",
+    "static/media/648348-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/648348-556x370.c9d98d08.jpg",
+    "static/media/660670-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/660670-556x370.94e868ce.jpg",
+    "static/media/715380-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/715380-556x370.ac8dc87e.jpg",
+    "static/media/715449-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/715449-556x370.1236b259.jpg",
+    "static/media/715455-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/715455-556x370.69c641c2.jpg",
+    "static/media/715588-556x370.jpg": "/seainfo6150-final-project-webapp/static/media/715588-556x370.f9301949.jpg"
   }
 }
