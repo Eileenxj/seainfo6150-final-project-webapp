@@ -5,8 +5,9 @@ import PropTypes from "prop-types";
 const Home = (props) => {
     return (
         <div>
-            {/* {props.recipes} */}
-            {/* <AllCategories categories={props.categories}/> */}
+            <h1>Home</h1>
+            <h2>Get Popular Recipes, Enjoy Food With Your Friends</h2>
+            <RecipeList recipes={props.recipes}/>
             {/* <RecipeList recipes={props.recipes}/> */}
                 
         </div>

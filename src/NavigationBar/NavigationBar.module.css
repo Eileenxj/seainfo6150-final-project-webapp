@@ -1,4 +1,4 @@
-.main-navigation {
+.navigation {
     position: relative;
     z-index: 400;
     font-family: "CopperPot Bold";
@@ -14,14 +14,14 @@
 }
   
 .subcontainer {
-    height: 60px;
+    height: 80px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-search {
+.search {
     font-family: "Source Sans Pro",Times,serif;
     font-size: 16px;
     line-height: 24px;
@@ -29,17 +29,17 @@
     letter-spacing: 0;
 }
 
-.primary-search-form {
+.searchForm {
     height: 100%;
     position: relative;
 }
-.search-label{
+.searchLabel{
     position: relative;
     left: -56px;
     top: 6px;
 }
 
-.search-field{
+.searchField{
     text-indent: 0;
     width: 320px;
     border-width: 1px;
@@ -58,12 +58,12 @@
     position: absolute;
 }
 
-.search-button{
+.searchButton{
     background: #d54215;
     padding: 14px;
 }
 @media screen and (min-width: 1024px){
-    .primary-nav-search {
+  .search {
         display: flex;
         justify-content: center;
         flex: 100 0 320px;
@@ -73,19 +73,19 @@
 }
 
   @media screen and (min-width: 525px) {
-    .primary-search-form {
+    .search {
         width: 320px;
     }
   }
   
   @media screen and (min-width: 800px) {
-    .main-navigation {
+    .navigation {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
   @media screen and (min-width: 1150px) {
-    .main-navigation {
+    .navigation {
       grid-template-columns: repeat(4, 1fr);
     }
   }

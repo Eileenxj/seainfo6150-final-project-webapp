@@ -1,14 +1,14 @@
 import React from "react";
 import CategoryIcon from "../CategoryIcon/CategoryIcon.jsx"
 import PropTypes from "prop-types";
-
+import {Link} from "react-router-dom";
 const AllCategories = (props) => {
   let displayContent;
   if (props.categories) {
     displayContent = (
       <ul>
         {props.categories.map( (category) => {
-          return (<CategoryIcon category={category}/>);
+          return (<Link to={`/category/${category}`} ><CategoryIcon category={category}/></Link>);
           })
         }
       </ul>

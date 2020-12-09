@@ -1,6 +1,6 @@
 import React from 'react'
-
-const Baz = (props) => {
+import styles from './RecipeDetail.module.css'
+const RecipeDetail = (props) => {
     return (
         <div>
             The RecipeDetail page
@@ -8,4 +8,4 @@ const Baz = (props) => {
     )
 }
 
-export default Baz
+export default RecipeDetail
