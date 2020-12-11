@@ -8,7 +8,7 @@ const RecipeList = (props) => {
     displayContent = (
       <ul>
       {props.recipes.map((recipe) => (
-          <RecipeListItem recipe={recipe}/>
+          <RecipeListItem recipe={recipe} key={recipe.id}/>
       ))}
       </ul>
     );
@@ -24,7 +24,6 @@ const RecipeList = (props) => {
 };
 
 RecipeList.propTypes = {
-    recipes: PropTypes.array.isRequired,
-    pageName: PropTypes.string.isRequired
+    recipes: PropTypes.array.isRequired
 }
 export default RecipeList;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 // import styles from "./CSSModule.module.css";
+import SearchResult from "../SearchResults/SearchResults";
+
 
 const Search = () => {
   const [submittedForm, setSubmittedForm] = useState();
@@ -13,7 +15,11 @@ const Search = () => {
     <div>
       {
         submittedForm ? (
-          <div>Your form entry was {submittedForm.get("myText")} and {submittedForm.get("myDropdown")}</div>
+          // <div>Your form entry was {submittedForm.get("query")} and {submittedForm.get("type")}</div>
+          <SearchResult query={submittedForm.get("query")} type={submittedForm.get("type")} number={submittedForm.get("number")}
+          cuisine={submittedForm.get("cuisine")} equipment={submittedForm.get("equipment")} diet={submittedForm.get("diet")}
+          sort={submittedForm.get("sort")} intolerances={submittedForm.get("intolerances")}
+          />
         ) : (
           <form onSubmit={onSubmit}>
             <label htmlFor="query">Recipe or Keyword</label>
@@ -52,7 +58,6 @@ const Search = () => {
             <label for="egg"> Egg</label><br/>
             <input type="checkbox" id="peanut" name="peanut" value="peanut"/>
             <label for="peanut"> Peanut</label><br/>
-
             <input type="submit" value="Submit"/>
             </form >
         )

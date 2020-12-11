@@ -63,32 +63,9 @@ function App() {
         />
         <Route exact path="/recipe/:recipeId"     
         render = {({ match }) => (
-                  <RecipeDetail/>
+                  <RecipeDetail id={match.params.recipeId}/>
                   )}
         />
-        {/* <Route
-          path="/category/:categoryid"
-          exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Category
-              categoryId={match.params.categoryId}
-            />
-          )}
-        />
-        <Route
-          path="/recipe/:id"
-          exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <RecipeDetail
-              id={match.params.id}
-            />
-          )}
-        />
-        <Route component={Error} /> */}
       </Switch>
     </div>
   );

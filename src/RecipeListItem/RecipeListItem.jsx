@@ -13,10 +13,9 @@ const RecipeListItem = (props) => {
 //   }
 
   return (
-    <li>
+    <li key={props.recipe.id}>
         <Link to={`/recipe/${props.recipe.id}`}>
         <article>
-        {/* <img src={require(`../images/${props.pageName}/${props.recipe.id}.jpg`)} alt={props.recipe.title} /> */}
         <img src={props.recipe.image} alt={props.recipe.title} />
         <h2>{props.recipe.title}</h2>
         </article>
