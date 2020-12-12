@@ -13,7 +13,7 @@ const RecipeListItem = (props) => {
 //   }
 
   return (
-    <li key={props.key} className={styles.container}>
+    <div key={props.key} className={styles.container}>
         <Link to={`/recipe/${props.recipe.id}`}>
         <div className={styles.subcontainer}>
           <img src={props.recipe.image} alt={props.recipe.title} className={styles.image}/>
@@ -22,7 +22,7 @@ const RecipeListItem = (props) => {
           </div>       
         </div>
         </Link>
-    </li>
+    </div>
   );
 };
 

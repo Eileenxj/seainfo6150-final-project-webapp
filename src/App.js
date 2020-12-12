@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Switch, Route } from "react-router-dom";
+import { Redirect, Switch, Route } from "react-router-dom";
 import NavigationBar from "./NavigationBar/NavigationBar.jsx"
 import Home from "./Home/Home.jsx";
 import Category from "./Category/Category.jsx";
@@ -66,8 +66,10 @@ function App() {
                     <RecipeDetail id={match.params.recipeId}/>
                     )}
         />
+        <Route path="/404" component={Error} />
+        <Redirect to="/404" />
       </Switch>
-      
+
     </div>
   );
 }

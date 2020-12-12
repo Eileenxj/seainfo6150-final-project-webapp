@@ -1,0 +1,12 @@
+.title 
+{
+    text-align:center; 
+    font-size: 40px; 
+    font-family:Serif; 
+    font-weight: strong;
+}
+.text {
+    text-align:center; 
+    font-family:Sans-Serif; 
+    font-size: 20px
+}

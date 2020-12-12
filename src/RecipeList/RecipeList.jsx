@@ -8,11 +8,11 @@ const RecipeList = (props) => {
   if (props.recipes) {
     displayContent = (
       <div className={styles.container}>
-          <ul className={styles.subcontainer}>
+          
           {props.recipes.map((recipe) => (
               <RecipeListItem recipe={recipe} key={recipe.id}/>
           ))}
-          </ul>
+        
       </div>
     );
   } else {
