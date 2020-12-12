@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the ContactUs component correctly 1`] = `
+<div>
+  <div>
+    <h1
+      class="title"
+    >
+      Contact us
+    </h1>
+    <p
+      class="text"
+    >
+      If you have any questions and need more help, please email to 
+      <a
+        href="mailto:service@popularrecipes.com"
+      >
+        service@popularrecipes.com
+      </a>
+    </p>
+  </div>
+</div>
+`;

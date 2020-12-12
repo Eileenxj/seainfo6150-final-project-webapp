@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Search component correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="container"
+    >
+      <form
+        class="form"
+      >
+        <h3
+          class="title"
+        >
+          Search Recipes Form
+        </h3>
+        <label
+          class="label"
+          for="query"
+        >
+          Recipe or Keyword
+        </label>
+        <input
+          class="input"
+          id="queryId"
+          name="query"
+          required=""
+          type="text"
+        />
+        <br />
+        <label
+          class="label"
+          for="type"
+        >
+          Meal Type
+        </label>
+        <input
+          class="input"
+          id="typeId"
+          name="type"
+          required=""
+          type="text"
+        />
+        <br />
+        <label
+          class="label"
+          for="number"
+        >
+          The Number of Expected Results
+        </label>
+        <input
+          class="input"
+          id="numberId"
+          name="number"
+          required=""
+          type="text"
+        />
+        <br />
+        <label
+          class="label"
+          for="cuisine"
+        >
+          cuisine(optional)
+        </label>
+        <input
+          class="input"
+          id="cuisineId"
+          name="cuisine"
+          type="text"
+        />
+        <br />
+        <label
+          class="label"
+          for="equipment"
+        >
+          equipment(optional)
+        </label>
+        <input
+          class="input"
+          id="equipmentId"
+          name="equipment"
+          type="text"
+        />
+        <br />
+        <label
+          class="label"
+          for="dietDropdown"
+        >
+          Diet(optional)
+        </label>
+        <br />
+        <select
+          class="dropdown"
+          id="dietDropdown"
+          name="dietDropdown"
+        >
+          <option
+            value="empty"
+          >
+            (empty)
+          </option>
+          <option
+            value="Gluten Free"
+          >
+            Gluten Free
+          </option>
+          <option
+            value="Vegetarian"
+          >
+            Vegetarian
+          </option>
+          <option
+            value="Pescetarian"
+          >
+            Pescetarian
+          </option>
+        </select>
+        <br />
+        <label
+          class="label"
+          for="sortDropdown"
+        >
+          Sort By(optional)
+        </label>
+        <br />
+        <select
+          class="dropdown"
+          id="sortDropdown"
+          name="sortDropdown"
+        >
+          <option
+            value="empty"
+          >
+            (empty)
+          </option>
+          <option
+            value="calories"
+          >
+            calories
+          </option>
+          <option
+            value="popularity"
+          >
+            popularity
+          </option>
+          <option
+            value="healthiness"
+          >
+            healthiness
+          </option>
+        </select>
+        <br />
+        <label
+          class="label"
+        >
+          Select Intolerances(optional)
+        </label>
+        <br />
+        <label
+          for="dairy"
+        >
+          <input
+            id="dairy"
+            name="dairy"
+            type="checkbox"
+            value="dairy"
+          />
+          Dairy
+          <span />
+        </label>
+        <br />
+        <label
+          for="egg"
+        >
+          <input
+            id="egg"
+            name="egg"
+            type="checkbox"
+            value="egg"
+          />
+          Egg
+          <span />
+        </label>
+        <br />
+        <label
+          for="peanut"
+        >
+          <input
+            id="peanut"
+            name="peanut"
+            type="checkbox"
+            value="peanut"
+          />
+          Peanut
+          <span />
+        </label>
+        <br />
+        <input
+          class="submit"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;

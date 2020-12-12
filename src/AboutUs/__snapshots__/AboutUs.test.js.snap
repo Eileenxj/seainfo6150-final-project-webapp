@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the AboutUs component correctly 1`] = `
+<div>
+  <section
+    class="container"
+  >
+    <h1
+      class="title"
+    >
+       About Us 
+    </h1>
+    <p
+      class="text"
+    >
+        We are a group developers who love cooking and enjoy life. 
+    </p>
+  </section>
+</div>
+`;
