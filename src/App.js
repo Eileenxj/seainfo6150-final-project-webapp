@@ -57,16 +57,17 @@ function App() {
         <Route exact path="/aboutus"><AboutUs/></Route>
         <Route exact path="/contactus"><ContactUs/></Route>
         <Route exact path="/category/:categoryId"     
-        render = {({ match }) => (
-                  <Category categoryId={match.params.categoryId}/>
-                  )}
+          render = {({ match }) => (
+                    <Category categoryId={match.params.categoryId}/>
+                    )}
         />
         <Route exact path="/recipe/:recipeId"     
-        render = {({ match }) => (
-                  <RecipeDetail id={match.params.recipeId}/>
-                  )}
+          render = {({ match }) => (
+                    <RecipeDetail id={match.params.recipeId}/>
+                    )}
         />
       </Switch>
+      
     </div>
   );
 }

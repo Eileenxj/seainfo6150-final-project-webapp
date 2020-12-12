@@ -21,62 +21,19 @@
     align-items: center;
 }
 
-.search {
-    font-family: "Source Sans Pro",Times,serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    letter-spacing: 0;
+.h6 {
+  font-size: 1.75rem;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .0075em;
+  color: orange;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-decoration: none;
 }
-
-.searchForm {
-    height: 100%;
-    position: relative;
-}
-.searchLabel{
-    position: relative;
-    left: -56px;
-    top: 6px;
-}
-
-.searchField{
-    text-indent: 0;
-    width: 320px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,0.65);
-    font-family: "Source Sans Pro",Times,serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    letter-spacing: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px 66px 10px 16px;
-    color: rgba(0,0,0,0.95);
-    position: absolute;
-}
-
-.searchButton{
-    background: #d54215;
-    padding: 14px;
-}
-@media screen and (min-width: 1024px){
-  .search {
-        display: flex;
-        justify-content: center;
-        flex: 100 0 320px;
-        left: 16px;
-        right: 0;
-    }
-}
-
-  @media screen and (min-width: 525px) {
-    .search {
-        width: 320px;
-    }
-  }
   
   @media screen and (min-width: 800px) {
     .navigation {
